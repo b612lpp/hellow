@@ -1,16 +1,15 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"net/http"
+
+	"b612lpp.hellow/handlers"
 )
 
 func main() {
 	q := http.NewServeMux()
-	q.HandleFunc("/", mainPage)
-	http.ListenAndServe(":8080", q)
-}
-
-func mainPage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hello World!")
+	q.HandleFunc("/", handlers.MainPage)
+	q.HandleFunc("/calc/", handlers.Calc)
+	log.Fatal(http.ListenAndServe(":8080", q))
 }
