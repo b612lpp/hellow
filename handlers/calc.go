@@ -3,6 +3,7 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
+	"log/slog"
 	"net/http"
 )
 
@@ -22,9 +23,11 @@ func Calc(w http.ResponseWriter, r *http.Request) {
 	if ifReqValid(r) && v.CurrentPercent > 0 && v.CurrentCost > 0 {
 		fmt.Fprintln(w, doMath(v))
 		json.NewEncoder(w).Encode(doMath(v))
+		slog.Info("Calculated", "incoming parameters", v)
 
 	} else {
 		fmt.Fprintln(w, "Wrong request")
+		slog.Error("Wrong, request", "asked with params", v)
 	}
 
 }
