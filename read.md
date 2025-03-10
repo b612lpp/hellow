@@ -14,3 +14,5 @@ Added docker file. Build and run from differnt images.
 LOGGING
 Next step is logging. Added slog events: server start, main page, API happy and wrong request.
 
+COMPOSE
+Project got another container for futher UI

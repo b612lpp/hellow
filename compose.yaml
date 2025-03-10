@@ -1,0 +1,11 @@
+services:
+  hellow:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+  uihw:
+    build: ./uihw
+    ports:
+      - 8081:80

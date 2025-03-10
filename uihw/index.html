@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI gas calc</title>
+</head>
+<body>
+    <script src="scripts/script.js"></script>
+    <div ><img src="assets/img/cat.jpg" alt="" id="cat" width="200" height="200"></div>
+    <form>
+        <label for="value">Процент заполнение бака:</label><br>
+        <input type="number" id="value" value="35" min="0" max="100"><br>
+        <label for="cost">Цена за литр газа:</label><br>
+        <input type="number" id="cost" value="30" max="100" min="0"><br><br>
+    </form> 
+    <h2 id="result" style="display: none;"> Результат рассчета</h2>
+    <p id="liters" class="result"></p>
+    <p id="cost" class="result"></p>
+    <button id="button" onclick="send()">Рассчитать</button>
+ 
+</body>
+</html>
