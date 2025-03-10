@@ -2,11 +2,15 @@
 Hello project has been started.
 No concreet functionality just testing features. 
 
-Now app calculates and returns incoming integer from json
-curl -H "Content-Type: application/json" -d '{"name":22}' http://localhost:8080/calc/
+HELLO WORLD
+Web server with main page.
 
-
+UNSFAFE API
 curl -X GET -H "Content-Type: application/json" -d '{"value":22, "cost":30}' http://localhost:8080/calc/
 
+DOCKER
+Added docker file. Build and run from differnt images.
 
+LOGGING
 Next step is logging. Added slog events: server start, main page, API happy and wrong request.
+
